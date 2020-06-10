@@ -28,7 +28,7 @@ url: "https://links-field.github.io" # the base hostname & protocol for your sit
 github_username:  linksfieldnet
 
 # Build settings
-#theme: "just-the-docs"
+theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
