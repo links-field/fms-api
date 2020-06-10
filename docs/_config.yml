@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: vCodes Documentation
+title: Links Field CMP Documentation
 email: admin@vcodes.co
 description: >- # this means to ignore newlines until "baseurl:"
   Right now the site description is NULL.
@@ -53,7 +53,7 @@ heading_anchors: true
 #    - "//github.com/pmarsceill/just-the-docs"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2020 vCodes. Non-Distributalbe.</a>"
+footer_content: "Copyright &copy; 2020 Linksfield Networks. Non-Distributalbe.</a>"
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
