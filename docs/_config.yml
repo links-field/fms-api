@@ -22,8 +22,8 @@ title: vCodes Documentation
 email: admin@vcodes.co
 description: >- # this means to ignore newlines until "baseurl:"
   Right now the site description is NULL.
-baseurl: "/vdoc" # the subpath of your site, e.g. /blog
-url: "https://links-field.github.io/cmp-gateway" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/cmp-gateway" # the subpath of your site, e.g. /blog
+url: "https://links-field.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: meimeipuppy
 github_username:  linksfieldnet
 
