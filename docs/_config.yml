@@ -53,7 +53,7 @@ heading_anchors: true
 #    - "//github.com/pmarsceill/just-the-docs"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2020 vCodes. Distributed by an MIT license.</a>"
+footer_content: "Copyright &copy; 2020 vCodes. Non-Distributalbe.</a>"
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
