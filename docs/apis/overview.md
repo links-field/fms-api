@@ -10,6 +10,6 @@ nav_order: 1
 
 | Path | API Name |
 |------|----------|
-| `/package/syncPackages` |  Synchronize tariff package information allocated to the account |
-| `/device/queryBatchDevice` | Get device information in batches |
-| `/device/queryDevice` | Query real-time information of a single device|
+| `/user/emailRegister` |  register user |
+| `/pacakge/countryPackageList` | query pacakges by country |
+| `/package/detail` | query detail of one selected data package|
