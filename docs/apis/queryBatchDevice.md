@@ -1,13 +1,13 @@
 ---
 layout: default
-title: queryBatchDevice
+title: countryPackageList
 parent: apis
 nav_order: 3
 ---
 
-# queryBatchDevice
+# countryPackageList
 
-To sync all the available data bundle packages assigned to this enterprise/user account
+To query all the available data bundle packages assigned to this enterprise account
 
 ---
 
