@@ -18,5 +18,5 @@ This document defines the interface between the enterprise backend system or App
 Please refer to [Swagger API](http://47.56.82.232:49090/swagger-ui.html#/) for details of these APIs.
 
 ---
-[Get Started](format/){: .btn .btn-purple }
+[Get Started](general/){: .btn .btn-purple }
 

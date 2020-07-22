@@ -4,26 +4,28 @@
 
 layout: page
 nav_order: 2
-permalink: /format/
+permalink: /general/
 ---
 
 # General
+
 {: .no_toc}
 
 FMS APIs system renders 3 modules, user, package and order. Payment gateway integration or implementation is not within the scope of this document.
 
 ## Table of contents
+
 {: .no_toc .text-delta}
 
 1. TOC
 {:toc}
-
 
 ## API Request
 
 API request body is comprised of parameters that are used to request information from FMS platform
 
 ### request header
+
 After registeration or successful login, Api access token will be returned in the response. Embed the token in the header of the following APIs.
 
 ### sample
@@ -42,6 +44,7 @@ After registeration or successful login, Api access token will be returned in th
 ```
 
 ### parameters
+
 Across the APIs, below are the common parameters and their descriptions:
 
 | Parameter   | Is Required | Descriptions/ Remarks |
@@ -51,10 +54,10 @@ Across the APIs, below are the common parameters and their descriptions:
 | userType        | Yes         | system administrator:1; Enterprise user:2; business user:3; customer:4    |
 | appId     | Yes         | app: 12;The background: 10; H5: 14 |
 
-
 ## Response
 
 Reponse usually follows below format:
+
 ```json
 
 {
@@ -73,8 +76,8 @@ Reponse usually follows below format:
 | message        | Yes         | response message     |
 | messageSourceHandler     | Yes         |   -    |
 
-
 ## Flow
+
 The apis flow of a successful order is as below:
 
 | No. of step | description | API used|
@@ -83,5 +86,4 @@ The apis flow of a successful order is as below:
 | 2           | query package by country         | package/countryPackageList         |
 | 3           | query data package detail        |   /package/detail   |
 | 4           | after user clicks on 'pay' button, before actual transaction is complete, call this api to reserve the QR profile for the user          |   /package/preOrderPackage    |
-| 5           | 
-
+| 5           |   |
