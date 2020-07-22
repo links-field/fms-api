@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Links Field CMP Documentation
+title: Links Field FMS API Documentation
 email: admin@vcodes.co
 description: >- # this means to ignore newlines until "baseurl:"
   Right now the site description is NULL.
