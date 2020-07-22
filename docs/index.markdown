@@ -5,18 +5,17 @@
 layout: default
 nav_order: 1
 ---
-# First
+# Introduction
+FMS is the eSIM QR provisiong and online store management system made available to enterpise eSIM customers, powered by Linksfield Network. 
 
 ### Scope
-This document defines the interface between the enterprise device management system and the CMP platform to render connectivity control and management to the enterprise users.
+This document defines the interface between the enterprise backend system or App, and the FMS platform to render connectivity control, and eSIM data bundle management to the enterprise users.
 
 ### Char set
 `UTF-8` encoding is used by default
 
-### Protocol
-HTTP protocol is used to interact, using HTTP POST requests, where the HTTP packet data is in `json` format, and the relevant data in  json is signed using the HMAC-SHA1 algorithm to prevent data from being tampered during transmission.
-
-The CMP platform provides multiple Http interface addresses (the formal access address is subsequently determined) so that the access party can send the request.
+### Swagger
+Please refer to [Swagger API](http://47.56.82.232:49090/swagger-ui.html#/) for details of these APIs.
 
 ---
 [Get Started](format/){: .btn .btn-purple }
