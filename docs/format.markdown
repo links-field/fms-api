@@ -47,12 +47,12 @@ After registeration or successful login, Api access token will be returned in th
 
 Across the APIs, below are the common parameters and their descriptions:
 
-| Parameter   | Is Required | Descriptions/ Remarks |
+| Parameter   | Type | Descriptions/ Remarks |
 |:------------|:------------|:----------------------|
-| partnerCode        | Yes         | Enterprise code, 'p' followed by 6 digits, for example `P001101` |
-| type        | Yes         | Response data         |
-| userType        | Yes         | system administrator:1; Enterprise user:2; business user:3; customer:4    |
-| appId     | Yes         | app: 12;The background: 10; H5: 14 |
+| partnerCode        | String         | Enterprise code, 'p' followed by 6 digits, for example `P001101` |
+| type        | String         | Search Type  1： country; 2：region          |
+| userType        | Integer         | system administrator:1; Enterprise user:2; business user:3; customer:4    |
+| appId     | Integer         | app: 12;The background: 10; H5: 14 |
 
 ## Response
 
@@ -69,12 +69,12 @@ Reponse usually follows below format:
 
 ```
 
-| Parameter   | Is Required | Descriptions/ Remarks |
+| Parameter   | Type | Descriptions/ Remarks |
 |:------------|:------------|:----------------------|
-| code        | Yes         | `0000` means success  |
-| data        | Yes         | Response data         |
-| message        | Yes         | response message     |
-| messageSourceHandler     | Yes         |   -    |
+| code        | Integer        | `0` means success  |
+| data        | Object         | Response data         |
+| message        |    String      | Response message     |
+| messageSourceHandler     |    Object       |   -    |
 
 ## Flow
 
