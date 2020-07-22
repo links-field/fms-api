@@ -7,8 +7,10 @@ nav_order: 2
 permalink: /format/
 ---
 
-# Message Format
+# General
 {: .no_toc}
+
+FMS APIs system renders 3 modules, user, package and order. Payment gateway integration or implementation is not within the scope of this document.
 
 ## Table of contents
 {: .no_toc .text-delta}
@@ -17,65 +19,69 @@ permalink: /format/
 {:toc}
 
 
-## Request
+## API Request
 
-| Parameter   | Is Required | Descriptions/ Remarks |
-|:------------|:------------|:----------------------|
-| version     | Yes         | 2.0                   |
-| access_code | Yes         | Used to verfiy the identity of the api caller. Format is `p` followed by 6 digits, such as `p00001` . please contact support@linksfield.net to apply for access_code|
-| timestamp   | Yes         | UTC timestamp of the request. Timetout = 5 minutes |
-| sign        | Yes         | Signature of the message |
+API request body is comprised of parameters that are used to request information from FMS platform
+
+### request header
+After registeration or successful login, Api access token will be returned in the response. Embed the token in the header of the following APIs.
+
+### sample
 
 ```json
 //sample code 
-    {
-        "version": "2.0",
-        "access_code" : "P000009",
-        "timestamp": "1493893791",
-        "page_no" : 1,
-        "page_size" : 3,
-        "month" : "201808",
-        "sign" : "sF4hFI390weingeseionglts="
-    }
+{
+  "countryCode": 460,
+  "languageId": "string",
+  "pageNum": 0,
+  "pageSize": 0,
+  "partnerCode": "P001101",
+  "type": 2
+}
 
 ```
 
+### parameters
+Across the APIs, below are the common parameters and their descriptions:
+
+| Parameter   | Is Required | Descriptions/ Remarks |
+|:------------|:------------|:----------------------|
+| partnerCode        | Yes         | Enterprise code, 'p' followed by 6 digits, for example `P001101` |
+| type        | Yes         | Response data         |
+| userType        | Yes         | system administrator:1; Enterprise user:2; business user:3; customer:4    |
+| appId     | Yes         | app: 12;The background: 10; H5: 14 |
+
+
 ## Response
+
+Reponse usually follows below format:
+```json
+
+{
+  "code": 0,
+  "data": {},
+  "message": "string",
+  "messageSourceHandler": {}
+}
+
+```
 
 | Parameter   | Is Required | Descriptions/ Remarks |
 |:------------|:------------|:----------------------|
 | code        | Yes         | `0000` means success  |
 | data        | Yes         | Response data         |
-| sign        | Yes         | Signature of data     |
-| message     | Yes         | Response message      |
+| message        | Yes         | response message     |
+| messageSourceHandler     | Yes         |   -    |
 
 
-```json
-//sample code 
-    {
-        "code": "0000",
-        "data" : 
-        {
-            "device_flow": [
-            {
-                "device_id" : "88888888888888",
-                "flow"      : 30.00
-            },
-            {
-                "device_id" : "88888888888889",
-                "flow"      : 54.30
-            }
-            ],
-            "devide_flow_list_num": 2,
-            "page" : {
-                "cur_page_no" : 1,
-                "page_size"   : 3,
-                "total_count" : 2,
-                "total_pages" : 1
-            },
-            "sign" : "3sesierngnaooadioancc="
-        },
-        "message" : "成功"
-    }
+## Flow
+The apis flow of a successful order is as below:
 
-```
+| No. of step | description | API used|
+|:------------|:------------|:----------------------|
+| 1           | register or authenticate user to get access to apis        | /user/emailRegister or /user/login  |
+| 2           | query package by country         | package/countryPackageList         |
+| 3           | query data package detail        |   /package/detail   |
+| 4           | after user clicks on 'pay' button, before actual transaction is complete, call this api to reserve the QR profile for the user          |   /package/preOrderPackage    |
+| 5           | 
+
