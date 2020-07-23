@@ -9,6 +9,10 @@ nav_order: 1
 
 FMS is the eSIM QR provisiong and online store management system made available to enterpise eSIM customers, powered by Linksfield Network.
 
+## Versions
+
+FMS APP API v1.0
+
 ## Scope
 
 This document defines the interface between the enterprise backend system or App, and the FMS platform to render connectivity control, and eSIM data bundle management to the enterprise users.
@@ -20,6 +24,15 @@ This document defines the interface between the enterprise backend system or App
 ## Swagger
 
 Please refer to [Swagger API](http://47.56.82.232:49090/swagger-ui.html#/) for details of these APIs.
+
+## Important Notice
+
+Deprecated Parameters
+{: .label .label-red }
+
+- pageNum
+- pageSize
+- verifyCode
 
 ---
 [Get Started](general/){: .btn .btn-purple }

@@ -54,7 +54,7 @@ Across the APIs, below are the common parameters and their descriptions:
 | userType        | Integer         | system administrator:1; Enterprise user:2; business user:3; customer:4    |
 | appId     | Integer         | app: 12;The background: 10; H5: 14 |
 
-## Response
+## API Response
 
 Reponse usually follows below format:
 
@@ -76,16 +76,17 @@ Reponse usually follows below format:
 | message        |    String      | Response message     |
 | messageSourceHandler     |    Object       |   -    |
 
-## Flow
 
-The apis flow of a successful purchase of eSIM QR profile is as below:
+## Token
 
-| No. of step | description | API used|
-|:------------|:------------|:----------------------|
-| 1           | register or authenticate user to get access to apis        | /user/emailRegister or /user/login  |
-| 2           | query  country list         | package/countryPackageList         |
-| 3           | query package by country         | /package/packageList         |
-| 4           | query data package detail        |   /package/detail   |
-| 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /package/preOrderPackage    |
-| 6           |  pay with the orderId obtained from the previous step  | N.A. ( enterprise completes the payment)  |
-| 7           |  call this api after successful payment with loop, until orderPayStatus returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |
+please refer to [emailRegister](/fms-api/apis/emailRegister) for token generation process.
+It should be noted that:
+
+- a new token will be generated each time with login
+- a token is valid for _to add_
+- after token expires, a log in is required to get the new token
+
+
+---
+
+[back to **introduction**](/fms-api/){: .btn .btn-green .mr-4}            [next to **flow**](/fms-api/flow/){: .btn .btn-purple }
