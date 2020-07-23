@@ -87,5 +87,5 @@ The apis flow of a successful purchase of eSIM QR profile is as below:
 | 3           | query package by country         | /package/packageList         |
 | 4           | query data package detail        |   /package/detail   |
 | 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /package/preOrderPackage    |
-| 6           |  pay with the orderId  which get from the previous step  | pay it  |
+| 6           |  pay with the orderId obtained from the previous step  | N.A. ( enterprise completes the payment)  |
 | 7           |  call this api when pay success with roll polling, stop it when orderPayStatus which returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |

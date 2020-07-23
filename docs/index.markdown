@@ -23,4 +23,3 @@ Please refer to [Swagger API](http://47.56.82.232:49090/swagger-ui.html#/) for d
 
 ---
 [Get Started](general/){: .btn .btn-purple }
-
