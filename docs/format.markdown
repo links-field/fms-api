@@ -89,4 +89,8 @@ It should be noted that:
 
 ---
 
+[back to top](/fms-api/general/#general)
+
+---
+
 [back to **introduction**](/fms-api/){: .btn .btn-green .mr-4}            [next to **flow**](/fms-api/flow/){: .btn .btn-purple }

@@ -21,10 +21,10 @@ After transanction is complete, the APP could display the eSIM profile detail to
 
 ## parameters
 
-- `orderId` is the order that a copmleted transanction is associated with.
+- `orderId` is the order that a completed transanction is associated with.
 
 ## Response
 
-_add_
+_to add_
 
 ---

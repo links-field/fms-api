@@ -7,7 +7,7 @@ nav_order: 3
 
 # countryPackageList
 
-To query all the available countries (the data plans covering countries) assigned to this enterprise account
+To query all the available countries (the data plans covering countries) assigned to this enterprise account; refer to [/package/countryPackageList](http://47.56.82.232:49090/swagger-ui.html#/package-controller/countryPackageListUsingPOST) for detail.
 
 ## Request Parameters
 

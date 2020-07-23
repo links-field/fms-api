@@ -7,7 +7,7 @@ nav_order: 2
 
 # emailRegister
 
-while enterprise backend handles their own user registration flow, it is important to inform FMS system to create an account for this user and associate it with a valid email address, for future order, notification and updates.
+while enterprise backend handles their own user registration flow, it is important to inform FMS system to create an account for this user and associate it with a valid email address, for future order, notification and updates. Refer to [/user/emailRegister](http://47.56.82.232:49090/swagger-ui.html#/user-controller/registerUsingPOST) for detail.
 
 ## request
 
