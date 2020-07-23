@@ -2,7 +2,7 @@
 layout: default
 title: emailRegister
 parent: apis
-nav_order: 1
+nav_order: 2
 ---
 
 # emailRegister
