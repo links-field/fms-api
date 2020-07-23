@@ -78,12 +78,14 @@ Reponse usually follows below format:
 
 ## Flow
 
-The apis flow of a successful order is as below:
+The apis flow of a successful purchase of eSIM QR profile is as below:
 
 | No. of step | description | API used|
 |:------------|:------------|:----------------------|
 | 1           | register or authenticate user to get access to apis        | /user/emailRegister or /user/login  |
-| 2           | query package by country         | package/countryPackageList         |
-| 3           | query data package detail        |   /package/detail   |
-| 4           | after user clicks on 'pay' button, before actual transaction is complete, call this api to reserve the QR profile for the user          |   /package/preOrderPackage    |
-| 5           |   |
+| 2           | query  country list         | package/countryPackageList         |
+| 3           | query package by country         | /package/packageList         |
+| 4           | query data package detail        |   /package/detail   |
+| 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /package/preOrderPackage    |
+| 6           |  pay with the orderId  which get from the previous step  | pay it  |
+| 7           |  call this api when pay success with roll polling, stop it when orderPayStatus which returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |
