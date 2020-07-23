@@ -23,7 +23,7 @@ After selecting a package, details of this package is returned using [`package/d
 1. `id` is the id of the selected data package
 2. `orderNum` is how many of the same data package are to be ordered  
 
-__description pending__
+_description pending_
 
 
 ## response
