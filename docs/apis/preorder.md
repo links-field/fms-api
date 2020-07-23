@@ -29,10 +29,9 @@ After end user intends to buy the package after detail is rendered, before trans
 
 ## parameters
 
-1. `id` is the id of the selected data package
-2. `orderNum` is how many of the same data package are to be ordered  
+1. 
 
-_description pending_
+
 
 
 ## response

@@ -14,16 +14,14 @@ After selecting a package, details of this package is returned using [`package/d
 ```json
 {
   "id": ,
-  "orderNum": 1
+  "orderNumber": 1
 }
 ```
 
 ## parameters
 
 1. `id` is the id of the selected data package
-2. `orderNum` is how many of the same data package are to be ordered  
-
-_description pending_
+2. ~~`orderNum`~~ is deprecated, it indicates how many of this data package are to be ordered, and is **Ignored** in current system.
 
 
 ## response

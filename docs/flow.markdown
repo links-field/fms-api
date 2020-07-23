@@ -39,8 +39,9 @@ The apis flow of a typical successful purchase of eSIM QR profile is as below:
 | 3           | query package by country         | /package/packageList         |
 | 4           | query data package detail        |   /package/detail   |
 | 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /package/preOrderPackage    |
-| 6           |  pay with the orderId obtained from the previous step  | N.A. ( enterprise completes the payment)  |
-| 7           |  call this api after successful payment with loop, until orderPayStatus returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |
+| 6           | pay with the orderId obtained from the previous step  | N.A. ( enterprise completes the payment)  |
+| 7           | call this api after successful payment with loop, until orderPayStatus returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |
+| 8           | get eSIM profile details | /order/myEsimDetail |
 
 ---
 
@@ -48,14 +49,13 @@ The apis flow of a typical successful purchase of eSIM QR profile is as below:
 
 By default, the user registration and management is handled by enterprise's own app and backend services. But in order to associate the user with the eSIM QR profile order, FMS is to be informed of the user changes. 
 
-In the event of the password being changed or being reset by end users, new password is to be synced with FMS for 
-
-_to be added_
+In the event of the password being changed or being reset by end users, new password is to be synced with FMS via [`/user/passwordReset`](http://47.56.82.232:49090/swagger-ui.html#/user-controller/passwordResetUsingPOST) api 
 
 ---
 
 ### Notification of successful payment
 
+_to be added_
 
 ---
 [back to **general**](/fms-api/general){: .btn .btn-green .mr-4}            [next to **api**](/fms-api/apis/){: .btn .btn-purple }

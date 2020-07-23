@@ -28,7 +28,7 @@ After selecting a country, get all the avaiable data packages that covers this c
 
 1. ~~`pageNum`~~ and ~~`pageSize`~~ are not in use anymore. all the available packages are to be returned in the response.
 2. when `countryCode` and `isoCountryName` both exist in parameters, `countryCode` supercedes.
-
+3. `type` is mandatory, the value is `1` or `2`. 
 
 
 ## response

@@ -83,9 +83,9 @@ please refer to [emailRegister](/fms-api/apis/emailRegister) for token generatio
 It should be noted that:
 
 - a new token will be generated each time with login
-- a token is valid for _to add_
-- after token expires, a log in is required to get the new token
-
+- a token is valid for 3 days
+- after token expires, a login is required to get the new token
+- api that uses expired token will receive error code `7` in response
 
 ---
 
