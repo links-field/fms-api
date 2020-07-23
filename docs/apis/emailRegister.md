@@ -25,7 +25,7 @@ while enterprise backend handles their own user registration flow, it is importa
 ## parameters
 
 1. `password` is MD5 processed
-2. ~`verfiyCode`~ is not in use
+2. ~~`verfiyCode`~~ is not in use
 
 
 ## response

@@ -24,7 +24,7 @@ To query all the available countries (the data plans covering countries) assigne
 
 please note that:
 
-1. ~`pageNum`~ and ~`pageSize` are not in use anymore.
+1. ~~`pageNum`~~ and ~~`pageSize`~~ are not in use anymore.
 All the countries assigned to the `partnerCode` (the enterprise) will be returned in the response
 
 2. `type`: `1`:The package coverage list includes this country; `2`:The package only covers this country

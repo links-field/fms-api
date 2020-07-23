@@ -12,5 +12,6 @@ nav_order: 1
 | Path | API Name |
 |------|----------|
 | `/user/emailRegister` |  register user |
-| `/pacakge/countryPackageList` | query pacakges by country |
+| `/pacakge/countryPackageList` | query all countries that are available |
+| `/pacakge/packageList` | query pacakges by country |
 | `/package/detail` | query detail of one selected data package|
