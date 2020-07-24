@@ -51,7 +51,13 @@ By default, the user registration and management is handled by enterprise's own 
 
 In the event of the password being changed or being reset by end users, new password is to be synced with FMS via [`/user/passwordReset`](http://47.56.82.232:49090/swagger-ui.html#/user-controller/passwordResetUsingPOST) api 
 
-After the new password is set, it is required to `/user/login` to obtain a new token.
+After the new password is set, it is required to [`/user/emailLogin`](http://47.56.82.232:49090/swagger-ui.html#/user-controller/emailLoginUsingPOST) to obtain a new token (in the response).
+
+| No. of step | description | API used|
+|:------------|:------------|:----------------------|
+| 1           | change password or reset password    | n.a. (implemented by application server )  |
+| 2           | change password sync with FMS        | user/passwordReset        |
+| 3           | log in with FMS to authenticate user  | user/emailLogin           |
 
 ---
 
