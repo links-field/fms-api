@@ -63,7 +63,32 @@ After the new password is set, it is required to [`/user/emailLogin`](http://47.
 
 ### Notification of successful payment
 
-_to be added_
+It is up to the enterprise business flow to complete a purchase of eSIM QR profile and transaction for the payment. But it is required that FMS is to be notified of the payment result, in order for the system to assign the actual eSIM profile for the order that has been paid successfully and correctly.  
+
+The notification should only be done once.
+
+**_1. successful/failed transaction_**
+
+The flow related to FMS in forementioned process is demonstrated below:
+
+| No. of step | description | API used|
+|:------------|:------------|:----------------------|
+| 1           | complete a transaction                     | n.a. (implemented by application server )  |
+| 2           | notify FMS of a successfully/unsuccessfully paid order    |    /payment/webhook     |
+
+In the event of the user cancelling the order or the transaction has error, it is suggested that application server waits until it gets the final transaction result within the payment time limit, before notifying FMS. The final result could indicate a succssful or a failed transaction. _If the final result still indicates a failed transation, notify FMS, then the pre-ordered profile will be released, and a new order should start from pre-order again._
+
+**_2. time out_**
+
+FMS has a timeout limit of **`10` minutes**, therefore if a notification is received after the time limit, error code will be returned, the pre-ordered profile will be released, and a new order should start from pre-order again. It is advised that application server sends the successful transaction notification without the time limit to avoid refund. 
+
+| No. of step | description | API used|
+|:------------|:------------|:----------------------|
+| 1           | complete a transaction                     | n.a. (payment implemented by application server )  |
+| 2           | notify FMS of a successful transaction `payment_intent.payment_succeed` after 10 minutes      |    /payment/webhook     |
+| 3           | return by FMS, error code: `6006`          |  |
+| 4           | submit a new order                         | /pacakge/preOrderPackage |
+
 
 ---
 

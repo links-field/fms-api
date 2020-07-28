@@ -29,9 +29,11 @@ After end user intends to buy the package after detail is rendered, before trans
 
 ## parameters
 
-1. 
-
-
+1. `currency` refers to `currencyAbbr` in _`currencyInfo`_ in the response of [`package/detail`](../detail)
+2. `currencyId` refers to `currencyId` in _`currencyInfo`_ in response of `package/detail`
+3. `deviceType` is fixed to `10` for iphone
+4. `id` refers to `package id`
+5. `periodNum` refers to `period` in response of `package/detail`
 
 
 ## response
