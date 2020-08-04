@@ -33,7 +33,7 @@ After end user intends to buy the package after detail is rendered, before trans
 2. `currencyId` refers to `currencyId` in _`currencyInfo`_ in response of `package/detail`
 3. `deviceType` is fixed to `10` for H5, iphone and android eSIM
 4. `id` refers to `package id`
-5. ~`languageId`~ is deprecated
+5. `~languageId~` is deprecated
 6. `periodNum` refers to `period` in response of `package/detail`
 
 
