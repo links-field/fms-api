@@ -29,7 +29,7 @@ After transanction is complete, the application should inform FMS so that the eS
 
 1. **`dataTime`** is the seconds of the transaction time in the transaction timezone.
 
-2. **`orderId`** is the `orderNo` returned by `pacakge/preOrderPackage`
+2. **`orderId`** is the `id` returned by `pacakge/preOrderPackage`
 
 3. **`type`** is the result of the payment transaction
 
