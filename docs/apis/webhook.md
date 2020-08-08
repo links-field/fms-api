@@ -40,7 +40,10 @@ After transanction is complete, the application should inform FMS so that the eS
 
 ### code
 
-`0`:success; `2`:Wrong parameters; `1102`:Time conversion exception; `9999`:Error;  `6006`:pre-order timeout; `10008`: order does not exist
+`0`:success; `2`:Wrong parameters; `1102`:Time conversion exception; `9999`:Error;  `6006`:pre-order timeout;
+`10008`: order does not exist; `10009`: price inconsistent
+`3004`: order system exception; `3005`: qrCode null
+others: system exception
 
 - `6006`: if the transaction result is notified more than **`10`** minutes after preOrder is called, this notificaion is considered _timeout_.
 
