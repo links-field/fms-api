@@ -5,9 +5,9 @@ parent: apis
 nav_order: 7
 ---
 
-# queryOrdStatusAndEmail
+# queryOrdStatus
 
-After transanction is complete, backend service is required to call this API and loop request its response until the correct result (`non zero value`) is returned, please refer to [`package/queryOrdStatusAndEmail`](http://47.56.82.232:49090/swagger-ui.html#/package-controller/queryOrderStatusAndSendEmailUsingPOST) for api details
+After transanction is complete, backend service is required to call this API and loop request its response until the correct result (`non zero value`) is returned, please refer to [`package/queryOrdStatus`](http://47.56.82.232:49090/swagger-ui.html#/package-controller/queryOrderStatusUsingPOST) for api details
 
 ## request
 
@@ -60,7 +60,7 @@ QR code will be given in the response of this API when `stataus == 1`, it can be
 
 ```json
 {
-  "orderStatus": 1,
+  "orderPayStatus": 1,
   "qrCode" : <string>
 
 }

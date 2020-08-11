@@ -41,8 +41,11 @@ The apis flow of a typical successful purchase of eSIM QR profile is as below:
 | 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /package/preOrderPackage    |
 | 6           | pay with the orderId obtained from the previous step  | N.A. ( enterprise completes the payment)  |
 | 7           | nofity FMS that the payment is successful  | webhook |
-| 8           | call this api after successful payment, with loop, until orderPayStatus returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |
+| 8           | call this api after successful payment, with loop, until orderPayStatus returned by this api is not 0  |  /package/queryOrdStatus  |
 | 9           | get eSIM profile details | /order/myEsimDetail |
+
+
+![flow-diagram](/payflow.png)
 
 ---
 
@@ -81,7 +84,7 @@ In the event of the user cancelling the order or the transaction has error, it i
 
 **_2. time out_**
 
-FMS has a timeout limit of **`10` minutes**, therefore if a notification is received after the time limit, error code will be returned, the pre-ordered profile will be released, and a new order should start from pre-order again. It is advised that application server sends the successful transaction notification without the time limit to avoid refund. 
+FMS has a timeout limit of **`60` minutes**, therefore if a notification is received after the time limit, error code will be returned, the pre-ordered profile will be released, and a new order should start from pre-order again. It is advised that application server sends the successful transaction notification without the time limit to avoid refund. 
 
 | No. of step | description | API used|
 |:------------|:------------|:----------------------|
