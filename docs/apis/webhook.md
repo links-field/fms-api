@@ -18,7 +18,7 @@ After transanction is complete, the application should inform FMS so that the eS
   "orderId": "string",
   "partnerCode": "string",
   "payAmount": 100,
-  "payCurrency": "￥",
+  "payCurrency": "USD",
   "paypalId": "string",
   "type": "payment_intent.succeeded"
 }
@@ -32,6 +32,8 @@ After transanction is complete, the application should inform FMS so that the eS
 2. **`orderId`** is the `id` returned by `pacakge/preOrderPackage`
 
 3. **`type`** is the result of the payment transaction
+
+4. **`payCurrency`**: `USD`
 
 - `payment_intent.succeeded`
 - `payment_intent.payment_failed`
