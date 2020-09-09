@@ -34,6 +34,7 @@ The apis flow of a typical successful purchase of eSIM QR profile is as below:
 
 | No. of step | description | API used|
 |:------------|:------------|:----------------------|
+| 0           | send verification code to email address | /user/emailVerificationCode|
 | 1           | register or authenticate user to get access to apis        | /user/emailRegister or /user/login  |
 | 2           | query  country list         | package/countryPackageList         |
 | 3           | query package by country         | /package/packageList         |
