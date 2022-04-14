@@ -32,5 +32,5 @@ while enterprise backend handles their own user registration flow, it is importa
 
 `x-access-token` will be returned in the response, it is required to carry this token in the header of following APIs. Token expires in 
 
----
+
 

@@ -37,13 +37,13 @@ The apis flow of a typical successful purchase of eSIM QR profile is as below:
 | 0           | send verification code to email address | /user/emailVerificationCode|
 | 1           | register or authenticate user to get access to apis        | /user/emailRegister or /user/login  |
 | 2           | query  country list         | package/countryPackageList         |
-| 3           | query package by country         | /package/packageList         |
-| 4           | query data package detail        |   /package/detail   |
-| 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /package/preOrderPackage    |
+| 3           | query package by country         | /v1.1/package/packageList         |
+| 4           | query data package detail        |   /v1.1/package/detail   |
+| 5           | call this api to create order and reserve the QR profile for the user. It will return orderId for you to pay       |   /v1.1/package/preOrderPackage    |
 | 6           | pay with the orderId obtained from the previous step  | N.A. ( enterprise completes the payment)  |
 | 7           | nofity FMS that the payment is successful  | webhook |
 | 8           | call this api after successful payment, with loop, until orderPayStatus returned by this api is not 0  |  /package/queryOrdStatusAndEmail  |
-| 9           | get eSIM profile details | /order/myEsimDetail |
+| 9           | get eSIM profile details | /v1.1/order/myEsimDetail |
 
 
 ![flow-diagram](/payflow.png)

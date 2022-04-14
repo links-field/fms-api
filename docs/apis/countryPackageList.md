@@ -31,6 +31,5 @@ All the countries assigned to the `partnerCode` (the enterprise) will be returne
 
 3. `countryCode` is in format of the ISO MCC (Mobile Country Code)
 
----
 
 

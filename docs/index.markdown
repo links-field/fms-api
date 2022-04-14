@@ -13,17 +13,23 @@ FMS is the eSIM QR provisiong and online store management system made available 
 
 __FMS APP API v1.1__
 1. removed the api access_token (in request header) for apis:
-/package/packageList,
-/package/queryCountry,
-/package/countryPackageList,
-/package/selectContinentsCode,
-/package/selectPackageByContinents,
-/package/selectHotPackage,
-/package/detail
+- /package/packageList,
+- /package/queryCountry,
+- /package/countryPackageList,
+- /package/selectContinentsCode,
+- /package/selectPackageByContinents,
+- /package/selectHotPackage,
+- /package/detail
 
 2. added topup feature to top up the already purchased eSIM
 /package/topUpOrder
 /package/selectTopUpList
+
+3. added (`2022 Apr 14`):
+- /v1.1/package/packageList
+- /v1.1/package/detail
+- /v1.1/package/preOrderPackage
+- /v1.1/order/myEsimDetail
 
 __FMS APP API v1.0__
 

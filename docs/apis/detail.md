@@ -71,4 +71,3 @@ After selecting a package, details of this package is returned using [`package/d
 
 ```
 
----

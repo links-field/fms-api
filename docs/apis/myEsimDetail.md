@@ -27,4 +27,4 @@ After transanction is complete, the APP could display the eSIM profile detail to
 
 _to add_
 
----
+

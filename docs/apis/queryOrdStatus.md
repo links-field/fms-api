@@ -67,4 +67,4 @@ QR code will be given in the response of this API when `stataus == 1`, it can be
 
 ```
 
----
+
