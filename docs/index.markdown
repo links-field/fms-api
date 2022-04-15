@@ -43,7 +43,7 @@ This document defines the interface between the enterprise backend system or App
 
 ## Swagger
 
-Please refer to [Swagger API](http://47.56.82.232:49090/swagger-ui.html#/) for details of these APIs.
+Please refer to [Swagger API](https://swaggertest.linksfield.net/fms/swagger-ui.html) for details of these APIs.
 
 Please note that:
 1. for easy manipulation of the request header parameters, it is recommended to use *postman* for actual testing.
